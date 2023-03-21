@@ -27,7 +27,7 @@ class StatusBarController {
         // statusItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
         
         if let statusBarButton = statusItem.button {
-            statusBarButton.image = NSImage(named: "highlighter")
+            statusBarButton.image = NSImage(systemSymbolName: "highlighter", accessibilityDescription: nil)
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = true
         }
