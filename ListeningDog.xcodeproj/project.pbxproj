@@ -12,6 +12,7 @@
 		03E0B9E129CA096000C1C923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E029CA096000C1C923 /* Assets.xcassets */; };
 		03E0B9E429CA096000C1C923 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */; };
 		03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */; };
+		03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListeningDog.entitlements; sourceTree = "<group>"; };
 		03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
 				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
 				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
+				03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */,
 				03E0B9E029CA096000C1C923 /* Assets.xcassets */,
 				03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */,
 				03E0B9E229CA096000C1C923 /* Preview Content */,
@@ -144,6 +147,7 @@
 			files = (
 				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
 				03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */,
+				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
