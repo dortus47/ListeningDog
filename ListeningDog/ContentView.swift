@@ -21,39 +21,40 @@ struct ContentView: View {
         ]
     ]
     
-    var body: some View { 
-        NavigationSplitView {
-            List(selection: $selectedFolder) {
-                ForEach(Array(folders.keys.sorted()), id: \.self) { folder in
-                    NavigationLink(value: folder) {
-                        Text(verbatim: folder)
-                    }
-                }
-            }
-            .navigationTitle("Sidebar")
-        } content: {
-            if let selectedFolder {
-                List(selection: $selectedItem) {
-                    ForEach(folders[selectedFolder, default: []], id: \.self) { item in
-                        NavigationLink(value: item) {
-                            Text(verbatim: item)
-                        }
-                    }
-                }
-                .navigationTitle(selectedFolder)
-            } else {
-                Text("Choose a folder from the sidebar")
-            }
-        } detail: {
-            if let selectedItem {
-                NavigationLink(value: selectedItem) {
-                    Text(verbatim: selectedItem)
-                        .navigationTitle(selectedItem)
-                }
-            } else {
-                Text("Choose an item from the content")
-            }
-        }
+    var body: some View {
+        Text("hi")
+//        NavigationSplitView {
+//            List(selection: $selectedFolder) {
+//                ForEach(Array(folders.keys.sorted()), id: \.self) { folder in
+//                    NavigationLink(value: folder) {
+//                        Text(verbatim: folder)
+//                    }
+//                }
+//            }
+//            .navigationTitle("Sidebar")
+//        } content: {
+//            if let selectedFolder {
+//                List(selection: $selectedItem) {
+//                    ForEach(folders[selectedFolder, default: []], id: \.self) { item in
+//                        NavigationLink(value: item) {
+//                            Text(verbatim: item)
+//                        }
+//                    }
+//                }
+//                .navigationTitle(selectedFolder)
+//            } else {
+//                Text("Choose a folder from the sidebar")
+//            }
+//        } detail: {
+//            if let selectedItem {
+//                NavigationLink(value: selectedItem) {
+//                    Text(verbatim: selectedItem)
+//                        .navigationTitle(selectedItem)
+//                }
+//            } else {
+//                Text("Choose an item from the content")
+//            }
+//        }
     }
 }
 

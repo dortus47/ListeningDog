@@ -17,11 +17,12 @@ struct ListeningDogApp: App {
         
         MenuBarExtra(currentNumber, systemImage: "\(currentNumber).circle") {
             MenuBarExtraView(currentNumber: $currentNumber)
-        }.menuBarExtraStyle(.menu)
-        
-        WindowGroup {
-            ContentView()
         }
+        .menuBarExtraStyle(.window)
+        
+//        WindowGroup {
+//            ContentView()
+//        }
     }
 }
 
@@ -36,7 +37,7 @@ struct ListeningDogApp: App {
 //    func applicationDidFinishLaunching(_ aNotification: Notification) {
 //
 //        popover.contentSize = NSSize(width: 360, height: 360)
-//        popover.contentViewController = NSHostingController(rootView: StatusBarView())
+//        popover.contentViewController = NSHostingController(rootView: ContentView())
 //
 //        // 상태바 인스턴스 초기화
 //        statusBar = StatusBarController.init(popover)
