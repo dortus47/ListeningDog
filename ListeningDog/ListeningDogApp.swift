@@ -11,9 +11,14 @@ import SwiftUI
 @main
 struct ListeningDogApp: App {
     
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+    @State var currentNumber: String = "1"
+
     var body: some Scene {
+        
+        MenuBarExtra(currentNumber, systemImage: "\(currentNumber).circle") {
+            MenuBarExtraView(currentNumber: $currentNumber)
+        }.menuBarExtraStyle(.menu)
+        
         WindowGroup {
             ContentView()
         }
@@ -21,23 +26,23 @@ struct ListeningDogApp: App {
 }
 
 // MARK: init
-class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    // 상태바 인스턴스 변수
-    var statusBar: StatusBarController?
-    
-    var popover = NSPopover.init()
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        popover.contentSize = NSSize(width: 360, height: 360)
-        popover.contentViewController = NSHostingController(rootView: ContentView())
-        
-        // 상태바 인스턴스 초기화
-        statusBar = StatusBarController.init(popover)
-    }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-}
+//class AppDelegate: NSObject, NSApplicationDelegate {
+//
+//    // 상태바 인스턴스 변수
+//    var statusBar: StatusBarController?
+//
+//    var popover = NSPopover.init()
+//
+//    func applicationDidFinishLaunching(_ aNotification: Notification) {
+//
+//        popover.contentSize = NSSize(width: 360, height: 360)
+//        popover.contentViewController = NSHostingController(rootView: StatusBarView())
+//
+//        // 상태바 인스턴스 초기화
+//        statusBar = StatusBarController.init(popover)
+//    }
+//
+//    func applicationWillTerminate(_ aNotification: Notification) {
+//        // Insert code here to tear down your application
+//    }
+//}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
+		0399687E29CEE5530089DC0A /* BleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BleManager.swift */; };
 		03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */; };
 		03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DE29CA095F00C1C923 /* ContentView.swift */; };
 		03E0B9E129CA096000C1C923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E029CA096000C1C923 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
+		0399687D29CEE5530089DC0A /* BleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleManager.swift; sourceTree = "<group>"; };
 		03E0B9D929CA095F00C1C923 /* ListeningDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListeningDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDogApp.swift; sourceTree = "<group>"; };
 		03E0B9DE29CA095F00C1C923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033F37C429CC9B7900E75A5D /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				0399687D29CEE5530089DC0A /* BleManager.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
 		03E0B9D029CA095F00C1C923 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +68,9 @@
 		03E0B9DB29CA095F00C1C923 /* ListeningDog */ = {
 			isa = PBXGroup;
 			children = (
+				033F37C429CC9B7900E75A5D /* Bluetooth */,
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
+				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
 				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
 				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
 				03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */,
@@ -145,10 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
 				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
 				03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */,
 				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
+				0399687E29CEE5530089DC0A /* BleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
