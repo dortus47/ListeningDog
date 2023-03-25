@@ -33,14 +33,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate {
         centralManager.stopScan()
     }
     
-    func getPairedDevices() {
-        let pairedDevices = IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice]
-        
-        for device in pairedDevices ?? [] {
-            print("Name: \(device.name ?? "Unknown"), Address: \(device.addressString)")
-        }
-    }
-    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:

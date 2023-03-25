@@ -17,12 +17,9 @@ struct ListeningDogApp: App {
         
         MenuBarExtra(currentNumber, systemImage: "\(currentNumber).circle") {
             MenuBarExtraView(currentNumber: $currentNumber)
+                .environmentObject(PairedDevicesManager())
         }
         .menuBarExtraStyle(.window)
-        
-//        WindowGroup {
-//            ContentView()
-//        }
     }
 }
 

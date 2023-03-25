@@ -13,11 +13,16 @@ struct MenuBarExtraView: View {
     
     @Binding var currentNumber: String
     @State private var BluetoothIsOn: Bool = false
-
+    
     var body: some View {
         List {
             
-            Section(content: {
+            Image("girl")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+            
+            Section(header: SectionHeader(title: "Bluetooth"), footer: Divider()) {
                 Toggle("Bluetooth", isOn: $BluetoothIsOn)
                     .toggleStyle(SwitchToggleStyle())
                 
@@ -27,9 +32,10 @@ struct MenuBarExtraView: View {
                     
                     Text(batteryManager.batteryLevel != nil ? "\(batteryManager.batteryLevel!)" : "???")
                 }
-            })
+            }
             
-            Divider()
+            
+            PairingDevicesView()
             
             Section(content: {
                 Button("One") {
@@ -42,23 +48,32 @@ struct MenuBarExtraView: View {
                 }
                 Button("Three") {
                     currentNumber = "3"
-                    BluetoothManager.shared.getPairedDevices()
                 }
                 
                 Button("Quit") {
-                        NSApp.terminate(nil)
-                    }
+                    NSApp.terminate(nil)
+                }
             })
+        }.padding(.all)
+            .listStyle(.plain)
+    }
+    
+    struct SectionHeader: View {
+        let title: String
 
-        }.padding()
+        var body: some View {
+            Text(title)
+//                .padding(.top)
+        }
     }
 }
 
 struct MenuBarExtraView_Previews: PreviewProvider {
     @State static var currentNumber: String = "1"
-
+    
     static var previews: some View {
         MenuBarExtraView(currentNumber: $currentNumber)
+            .environmentObject(PairedDevicesManager())
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */; };
+		038371AF29CF44C40036E44A /* PairedDevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AE29CF44C40036E44A /* PairedDevicesManager.swift */; };
 		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
 		0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BluetoothManager.swift */; };
 		03DB565429CF32FC00D557C0 /* BatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* BatteryManager.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingDevicesView.swift; sourceTree = "<group>"; };
+		038371AE29CF44C40036E44A /* PairedDevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedDevicesManager.swift; sourceTree = "<group>"; };
 		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		0399687D29CEE5530089DC0A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListeningDog-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -48,8 +52,25 @@
 			isa = PBXGroup;
 			children = (
 				0399687D29CEE5530089DC0A /* BluetoothManager.swift */,
+				038371AE29CF44C40036E44A /* PairedDevicesManager.swift */,
 			);
 			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		038371AB29CF3D000036E44A /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
+				038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		038371B029CF4FE80036E44A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		03DB565129CF323B00D557C0 /* Description */ = {
@@ -91,11 +112,12 @@
 		03E0B9DB29CA095F00C1C923 /* ListeningDog */ = {
 			isa = PBXGroup;
 			children = (
-				033F37C429CC9B7900E75A5D /* Bluetooth */,
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
-				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
+				033F37C429CC9B7900E75A5D /* Bluetooth */,
+				038371AB29CF3D000036E44A /* MenuBar */,
 				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
 				03DB565329CF32FC00D557C0 /* BatteryManager.swift */,
+				038371B029CF4FE80036E44A /* CustomViews */,
 				03DB565129CF323B00D557C0 /* Description */,
 				03DB565229CF325000D557C0 /* Files */,
 			);
@@ -183,7 +205,9 @@
 				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
 				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
 				03DB565429CF32FC00D557C0 /* BatteryManager.swift in Sources */,
+				038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */,
 				03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */,
+				038371AF29CF44C40036E44A /* PairedDevicesManager.swift in Sources */,
 				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
 				0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */,
