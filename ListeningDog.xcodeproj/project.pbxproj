@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
 		0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BluetoothManager.swift */; };
+		03DB565429CF32FC00D557C0 /* BatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* BatteryManager.swift */; };
 		03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */; };
 		03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DE29CA095F00C1C923 /* ContentView.swift */; };
 		03E0B9E129CA096000C1C923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E029CA096000C1C923 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		0399687D29CEE5530089DC0A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListeningDog-Bridging-Header.h"; sourceTree = "<group>"; };
+		03DB565329CF32FC00D557C0 /* BatteryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryManager.swift; sourceTree = "<group>"; };
 		03E0B9D929CA095F00C1C923 /* ListeningDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListeningDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDogApp.swift; sourceTree = "<group>"; };
 		03E0B9DE29CA095F00C1C923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,26 @@
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
+		03DB565129CF323B00D557C0 /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */,
+				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		03DB565229CF325000D557C0 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				03E0B9E229CA096000C1C923 /* Preview Content */,
+				03E0B9E029CA096000C1C923 /* Assets.xcassets */,
+				03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */,
+				0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		03E0B9D029CA095F00C1C923 = {
 			isa = PBXGroup;
 			children = (
@@ -73,12 +95,9 @@
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
 				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
 				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
-				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
-				03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */,
-				03E0B9E029CA096000C1C923 /* Assets.xcassets */,
-				03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */,
-				0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */,
-				03E0B9E229CA096000C1C923 /* Preview Content */,
+				03DB565329CF32FC00D557C0 /* BatteryManager.swift */,
+				03DB565129CF323B00D557C0 /* Description */,
+				03DB565229CF325000D557C0 /* Files */,
 			);
 			path = ListeningDog;
 			sourceTree = "<group>";
@@ -163,6 +182,7 @@
 			files = (
 				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
 				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
+				03DB565429CF32FC00D557C0 /* BatteryManager.swift in Sources */,
 				03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */,
 				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
@@ -291,11 +311,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ListeningDog/ListeningDog.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ListeningDog/Files/ListeningDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Z9N6W59ZG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -311,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mies.ListeningDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/ListeningDog-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/Files/ListeningDog-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -321,11 +341,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ListeningDog/ListeningDog.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ListeningDog/Files/ListeningDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Z9N6W59ZG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -341,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mies.ListeningDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/ListeningDog-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/Files/ListeningDog-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

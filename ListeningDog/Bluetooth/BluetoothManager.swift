@@ -41,27 +41,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate {
         }
     }
     
-    func getBatteryLevel() -> Double? {
-        guard let powerSources = IOPSCopyPowerSourcesInfo()?.takeRetainedValue() else {
-            return nil
-        }
-
-        guard let powerSourceArray = IOPSCopyPowerSourcesList(powerSources)?.takeRetainedValue() as? NSArray else {
-            return nil
-        }
-
-        for powerSource in powerSourceArray {
-            if let powerSourceDict = IOPSGetPowerSourceDescription(powerSources, powerSource as CFTypeRef)?.takeUnretainedValue() as? NSDictionary {
-                if let currentCapacity = powerSourceDict[kIOPSCurrentCapacityKey] as? Double,
-                   let maxCapacity = powerSourceDict[kIOPSMaxCapacityKey] as? Double {
-                    let batteryLevel = (currentCapacity / maxCapacity) * 100
-                    return batteryLevel
-                }
-            }
-        }
-        return nil
-    }
-    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:

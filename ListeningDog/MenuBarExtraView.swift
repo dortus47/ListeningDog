@@ -9,34 +9,47 @@ import SwiftUI
 
 struct MenuBarExtraView: View {
     
+    @ObservedObject var batteryManager = BatteryManager()
+    
     @Binding var currentNumber: String
     @State private var BluetoothIsOn: Bool = false
 
     var body: some View {
         List {
             
-            Toggle("Bluetooth", isOn: $BluetoothIsOn)
-                .toggleStyle(SwitchToggleStyle())
+            Section(content: {
+                Toggle("Bluetooth", isOn: $BluetoothIsOn)
+                    .toggleStyle(SwitchToggleStyle())
+                
+                HStack {
+                    
+                    Image(systemName: "battery.100")
+                    
+                    Text(batteryManager.batteryLevel != nil ? "\(batteryManager.batteryLevel!)" : "???")
+                }
+            })
             
-            HStack {
+            Divider()
+            
+            Section(content: {
+                Button("One") {
+                    currentNumber = "1"
+                    BluetoothManager.shared.startScanning()
+                }
+                Button("Two") {
+                    currentNumber = "2"
+                    BluetoothManager.shared.stopScanning()
+                }
+                Button("Three") {
+                    currentNumber = "3"
+                    BluetoothManager.shared.getPairedDevices()
+                }
                 
-                Image(systemName: "battery.100")
-                
-                Text("\(BluetoothManager.shared.getBatteryLevel() ?? 0)")
-            }
+                Button("Quit") {
+                        NSApp.terminate(nil)
+                    }
+            })
 
-            Button("One") {
-                currentNumber = "1"
-                BluetoothManager.shared.startScanning()
-            }
-            Button("Two") {
-                currentNumber = "2"
-                BluetoothManager.shared.stopScanning()
-            }
-            Button("Three") {
-                currentNumber = "3"
-                BluetoothManager.shared.getPairedDevices()
-            }
         }.padding()
     }
 }
