@@ -11,6 +11,7 @@ import IOKit.ps
 
 class BatteryManager: ObservableObject {
     
+    // 현재 나의 Mac의 배터리.
     @Published var batteryLevel: Int? = nil
 
     private var timer: AnyCancellable?

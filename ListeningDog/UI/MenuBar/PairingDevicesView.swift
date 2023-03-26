@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct PairingDevicesView: View {
-    @EnvironmentObject var pairedDevicesManager: PairedDevicesManager
+    @EnvironmentObject var pairedDevices: PairedDevices
     
     var body: some View {
         
-        
-        
         Section(header: SectionHeader(title: "페어링 기기"), footer: Divider()) {
-            ForEach(pairedDevicesManager.pairedDevices, id: \.addressString) { device in
-                Text("\(device.name ?? "Unknown")")
+            ForEach(pairedDevices.pairedDevices.sorted(by: { $0.isConnecting && !$1.isConnecting }), id: \.device.addressString) { bluetoothDeviceInfo in
+                
+                let infoBinding = Binding<BluetoothDeviceInfo>(get: {
+                    return bluetoothDeviceInfo
+                }, set: {_ in
+                })
+                
+                DeviceInfoView(bluetoothDeviceInfo: infoBinding)
             }
         }.onAppear {
-            pairedDevicesManager.getPairedDevices()
+            pairedDevices.getPairedDevices()
         }
     }
     
@@ -37,6 +41,6 @@ struct PairingDevicesView: View {
 struct PairingDevicesView_Previews: PreviewProvider {
     static var previews: some View {
         PairingDevicesView()
-            .environmentObject(PairedDevicesManager())
+            .environmentObject(PairedDevices())
     }
 }

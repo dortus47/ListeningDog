@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuBarExtraView: View {
     
-    @ObservedObject var batteryManager = BatteryManager()
+    
     
     @Binding var currentNumber: String
     @State private var BluetoothIsOn: Bool = false
@@ -17,25 +17,24 @@ struct MenuBarExtraView: View {
     var body: some View {
         List {
             
-            Image("girl")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
+            Text("ListeningDog")
+                .fontWeight(.bold)
+            
+
+            
+            MyMacInfoView()
+            
+            PairingDevicesView()
+            
+//            Image("girl")
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 100, height: 100)
             
             Section(header: SectionHeader(title: "Bluetooth"), footer: Divider()) {
                 Toggle("Bluetooth", isOn: $BluetoothIsOn)
                     .toggleStyle(SwitchToggleStyle())
-                
-                HStack {
-                    
-                    Image(systemName: "battery.100")
-                    
-                    Text(batteryManager.batteryLevel != nil ? "\(batteryManager.batteryLevel!)" : "???")
-                }
             }
-            
-            
-            PairingDevicesView()
             
             Section(content: {
                 Button("One") {
@@ -54,8 +53,8 @@ struct MenuBarExtraView: View {
                     NSApp.terminate(nil)
                 }
             })
-        }.padding(.all)
-            .listStyle(.plain)
+        }
+        .listStyle(.inset)
     }
     
     struct SectionHeader: View {
@@ -63,8 +62,14 @@ struct MenuBarExtraView: View {
 
         var body: some View {
             Text(title)
-//                .padding(.top)
         }
+    }
+    
+    private func matchingDeviceImageName(name: String?) -> String {
+        
+        
+        
+        return "default"
     }
 }
 
@@ -73,7 +78,7 @@ struct MenuBarExtraView_Previews: PreviewProvider {
     
     static var previews: some View {
         MenuBarExtraView(currentNumber: $currentNumber)
-            .environmentObject(PairedDevicesManager())
+            .environmentObject(PairedDevices())
     }
 }
 
