@@ -9,16 +9,17 @@ import SwiftUI
 
 struct MyMacInfoView: View {
     
-    @ObservedObject var batteryManager = BatteryManager()
+    @ObservedObject var myMacManager = MyMacManager()
     
     private var batteryImageName: String {
-        print("hhh \(batteryManager.batteryLevel) \(batteryManager.isCharging)")
-        guard let battery = batteryManager.batteryLevel else {
+        
+        guard let battery = myMacManager.batteryLevel else {
             return "battery.0"
         }
+        print("hhh \(battery) \(myMacManager.isCharging)")
         
         if battery >= 100 {
-            return"battery.100"
+            return myMacManager.isCharging ? "battery.100.bolt" : "battery.100"
         } else if battery >= 75 {
             return "battery.75"
         } else if battery >= 50 {
@@ -35,12 +36,16 @@ struct MyMacInfoView: View {
         Section(header: SectionHeaderView(title: "나의 Mac"), footer: Divider()) {
             HStack(spacing: 3) {
                 
-                Text(batteryManager.batteryLevel != nil ? "\(batteryManager.batteryLevel!)%" : "???")
+                Image(systemName: "laptopcomputer")
+                
+                Spacer()
+                
+                Text(myMacManager.batteryLevel != nil ? "\(myMacManager.batteryLevel!)%" : "???")
                 Image(systemName: batteryImageName)
                     .overlay(
-                        batteryManager.isCharging ?
-                        Image(systemName: "bolt")
-                        : nil
+                        myMacManager.isCharging && myMacManager.batteryLevel == 100 ?
+                        nil
+                        : Image(systemName: "bolt")
                     )
             }
         }

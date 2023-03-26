@@ -1,5 +1,5 @@
 //
-//  BatteryManager.swift
+//  MyMacManager.swift
 //  ListeningDog
 //
 //  Created by 장은석 on 2023/03/25.
@@ -11,7 +11,7 @@ import IOKit.ps
 import IOKit.pwr_mgt
 
 
-class BatteryManager: ObservableObject {
+class MyMacManager: ObservableObject {
 
     @Published var batteryLevel: Int?
     @Published var isCharging: Bool = false // 추가된 변수
