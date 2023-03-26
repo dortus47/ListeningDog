@@ -10,5 +10,6 @@
 
 #import <IOKit/ps/IOPowerSources.h>
 #import <IOKit/ps/IOPSKeys.h>
+#import <IOKit/ps/IOPowerSources.h>
 
 #endif /* ListeningDog_Bridging_Header_h */

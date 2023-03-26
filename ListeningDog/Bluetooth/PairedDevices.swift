@@ -25,7 +25,7 @@ class PairedDevices: ObservableObject {
     private var timerCancellable: AnyCancellable?
     
     init() {
-        timerCancellable = Timer.publish(every: 3, on: .main, in: .common)
+        timerCancellable = Timer.publish(every: 30, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
                 self?.getPairedDevices()

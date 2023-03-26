@@ -13,6 +13,7 @@
 		038371B529CF53150036E44A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371B429CF53150036E44A /* Constants.swift */; };
 		038371B829CF5AE80036E44A /* MyMacInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371B729CF5AE80036E44A /* MyMacInfoView.swift */; };
 		038371BC29D015750036E44A /* BluetoothDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371BB29D015750036E44A /* BluetoothDeviceInfo.swift */; };
+		038371C029D057F80036E44A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371BF29D057F80036E44A /* SectionHeaderView.swift */; };
 		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
 		0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BluetoothManager.swift */; };
 		03DB565429CF32FC00D557C0 /* BatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* BatteryManager.swift */; };
@@ -31,6 +32,7 @@
 		038371B429CF53150036E44A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		038371B729CF5AE80036E44A /* MyMacInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacInfoView.swift; sourceTree = "<group>"; };
 		038371BB29D015750036E44A /* BluetoothDeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceInfo.swift; sourceTree = "<group>"; };
+		038371BF29D057F80036E44A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		0399687D29CEE5530089DC0A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListeningDog-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				038371B129CF51C30036E44A /* DeviceInfoView.swift */,
+				038371BF29D057F80036E44A /* SectionHeaderView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				038371AF29CF44C40036E44A /* PairedDevices.swift in Sources */,
 				038371B829CF5AE80036E44A /* MyMacInfoView.swift in Sources */,
 				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
+				038371C029D057F80036E44A /* SectionHeaderView.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
 				0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */,
 			);

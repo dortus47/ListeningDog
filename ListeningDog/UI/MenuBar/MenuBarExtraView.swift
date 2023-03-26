@@ -15,27 +15,21 @@ struct MenuBarExtraView: View {
     @State private var BluetoothIsOn: Bool = false
     
     var body: some View {
+        
         List {
-            
+
             Text("ListeningDog")
                 .fontWeight(.bold)
-            
 
-            
             MyMacInfoView()
-            
+
             PairingDevicesView()
-            
-//            Image("girl")
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: 100, height: 100)
-            
-            Section(header: SectionHeader(title: "Bluetooth"), footer: Divider()) {
+
+            Section(header: SectionHeaderView(title: "Bluetooth"), footer: Divider()) {
                 Toggle("Bluetooth", isOn: $BluetoothIsOn)
                     .toggleStyle(SwitchToggleStyle())
             }
-            
+
             Section(content: {
                 Button("One") {
                     currentNumber = "1"
@@ -48,21 +42,13 @@ struct MenuBarExtraView: View {
                 Button("Three") {
                     currentNumber = "3"
                 }
-                
+
                 Button("Quit") {
                     NSApp.terminate(nil)
                 }
             })
         }
-        .listStyle(.inset)
-    }
-    
-    struct SectionHeader: View {
-        let title: String
-
-        var body: some View {
-            Text(title)
-        }
+        .listStyle(.plain)
     }
     
     private func matchingDeviceImageName(name: String?) -> String {

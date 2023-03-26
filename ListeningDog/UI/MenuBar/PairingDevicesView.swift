@@ -12,7 +12,7 @@ struct PairingDevicesView: View {
     
     var body: some View {
         
-        Section(header: SectionHeader(title: "페어링 기기"), footer: Divider()) {
+        Section(header: SectionHeaderView(title: "페어링 기기"), footer: Divider()) {
             ForEach(pairedDevices.pairedDevices.sorted(by: { $0.isConnecting && !$1.isConnecting }), id: \.device.addressString) { bluetoothDeviceInfo in
                 
                 let infoBinding = Binding<BluetoothDeviceInfo>(get: {
@@ -24,15 +24,6 @@ struct PairingDevicesView: View {
             }
         }.onAppear {
             pairedDevices.getPairedDevices()
-        }
-    }
-    
-    struct SectionHeader: View {
-        let title: String
-
-        var body: some View {
-            Text(title)
-                .padding(.top)
         }
     }
 }
