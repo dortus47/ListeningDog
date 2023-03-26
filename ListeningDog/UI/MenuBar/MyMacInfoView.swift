@@ -11,25 +11,15 @@ struct MyMacInfoView: View {
     
     @ObservedObject var myMacManager = MyMacManager()
     
-    private var batteryImageName: String {
-        
-        guard let battery = myMacManager.batteryLevel else {
-            return "battery.0"
-        }
-        print("hhh \(battery) \(myMacManager.isCharging)")
-        
-        if battery >= 100 {
-            return myMacManager.isCharging ? "battery.100.bolt" : "battery.100"
-        } else if battery >= 75 {
-            return "battery.75"
-        } else if battery >= 50 {
-            return "battery.50"
-        } else if battery >= 25 {
-            return "battery.25"
-        } else {
-            return "battery.0"
-        }
+    var batteryLevel: Int? {
+        return myMacManager.batteryLevel
     }
+    
+    var isCharging: Bool {
+        return myMacManager.isCharging
+    }
+    
+    @State private var isHovered = false
     
     var body: some View {
         
@@ -37,16 +27,24 @@ struct MyMacInfoView: View {
             HStack(spacing: 3) {
                 
                 Image(systemName: "laptopcomputer")
+                Text(myMacManager.macModel)
                 
                 Spacer()
                 
-                Text(myMacManager.batteryLevel != nil ? "\(myMacManager.batteryLevel!)%" : "???")
-                Image(systemName: batteryImageName)
+                Text(batteryLevel != nil ? "\(batteryLevel!)%" : "???")
+                Image(systemName: batteryImageName(batteryLevel: batteryLevel, isCharging: isCharging))
                     .overlay(
-                        myMacManager.isCharging && myMacManager.batteryLevel == 100 ?
+                        isCharging && batteryLevel == 100 ?
                         nil
                         : Image(systemName: "bolt")
                     )
+            }
+            .frame(height: 35)
+            .padding(.horizontal, 5)
+            .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
+            .cornerRadius(8)
+            .onHover { hovering in
+                isHovered = hovering
             }
         }
     }

@@ -15,7 +15,7 @@ struct DeviceInfoView: View {
     
     var body: some View {
         
-        HStack(spacing: 10) {
+        HStack(spacing: 3) {
             
             Image(systemName: bluetoothDeviceInfo.isConnecting ? "personalhotspot.circle.fill" : "personalhotspot.circle")
                 .resizable()
@@ -26,7 +26,10 @@ struct DeviceInfoView: View {
             Text(bluetoothDeviceInfo.device.name)
             Spacer()
             
-            Text("\(bluetoothDeviceInfo.battery)%")
+            if bluetoothDeviceInfo.isConnecting {
+                Text("\(bluetoothDeviceInfo.battery)%")
+                Image(systemName: batteryImageName(batteryLevel: bluetoothDeviceInfo.battery, isCharging: false))
+            }
         }
         .frame(height: 35)
         .padding(.horizontal, 5)

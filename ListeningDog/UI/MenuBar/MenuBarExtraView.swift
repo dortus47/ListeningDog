@@ -20,6 +20,7 @@ struct MenuBarExtraView: View {
 
             Text("ListeningDog")
                 .fontWeight(.bold)
+                .padding(.top, 5)
 
             MyMacInfoView()
 

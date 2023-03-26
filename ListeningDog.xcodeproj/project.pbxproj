@@ -16,6 +16,7 @@
 		038371C029D057F80036E44A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371BF29D057F80036E44A /* SectionHeaderView.swift */; };
 		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
 		0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BluetoothManager.swift */; };
+		03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */; };
 		03DB565429CF32FC00D557C0 /* MyMacManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* MyMacManager.swift */; };
 		03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */; };
 		03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DE29CA095F00C1C923 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		0399687D29CEE5530089DC0A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListeningDog-Bridging-Header.h"; sourceTree = "<group>"; };
+		03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		03DB565329CF32FC00D557C0 /* MyMacManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacManager.swift; sourceTree = "<group>"; };
 		03E0B9D929CA095F00C1C923 /* ListeningDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListeningDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDogApp.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				038371B429CF53150036E44A /* Constants.swift */,
+				03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
 				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
+				03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */,
 				038371BC29D015750036E44A /* BluetoothDeviceInfo.swift in Sources */,
 				03DB565429CF32FC00D557C0 /* MyMacManager.swift in Sources */,
 				038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */,
