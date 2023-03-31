@@ -13,7 +13,7 @@ func batteryImageName(batteryLevel: Int? = 0, isCharging: Bool = false) -> Strin
     }
     
     if batteryLevel >= 100 {
-        return isCharging ? "battery.100.bolt" : "battery.100"
+        return "battery.100"
     } else if batteryLevel >= 75 {
         return "battery.75"
     } else if batteryLevel >= 50 {

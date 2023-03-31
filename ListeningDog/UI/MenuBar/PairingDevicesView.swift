@@ -22,8 +22,6 @@ struct PairingDevicesView: View {
                 
                 DeviceInfoView(bluetoothDeviceInfo: infoBinding)
             }
-        }.onAppear {
-            pairedDevices.getPairedDevices()
         }
     }
 }

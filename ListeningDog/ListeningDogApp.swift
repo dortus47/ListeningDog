@@ -16,8 +16,12 @@ struct ListeningDogApp: App {
     var body: some Scene {
         
         MenuBarExtra(currentNumber, systemImage: "\(currentNumber).circle") {
+            let pairedDevices = PairedDevices()
             MenuBarExtraView(currentNumber: $currentNumber)
-                .environmentObject(PairedDevices())
+                .environmentObject(pairedDevices)
+                .onAppear {
+                    pairedDevices.getPairedDevices()
+                }
         }
         .menuBarExtraStyle(.window)
     }

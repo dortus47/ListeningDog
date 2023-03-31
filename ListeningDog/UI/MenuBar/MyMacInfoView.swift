@@ -34,9 +34,7 @@ struct MyMacInfoView: View {
                 Text(batteryLevel != nil ? "\(batteryLevel!)%" : "???")
                 Image(systemName: batteryImageName(batteryLevel: batteryLevel, isCharging: isCharging))
                     .overlay(
-                        isCharging && batteryLevel == 100 ?
-                        nil
-                        : Image(systemName: "bolt")
+                        isCharging ? Image(systemName: "bolt") : nil
                     )
             }
             .frame(height: 35)
