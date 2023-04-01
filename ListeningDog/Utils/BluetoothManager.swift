@@ -6,21 +6,24 @@
 //
 
 import CoreBluetooth
-import Foundation
 import IOBluetooth
+import Combine
 
-class BluetoothManager: NSObject, CBCentralManagerDelegate {
+class BluetoothManager: NSObject, ObservableObject {
     static let shared = BluetoothManager()
     
     private var centralManager: CBCentralManager!
-    private(set) var discoveredDevices: [CBPeripheral] = []
+    private var discoveredDevices: [CBPeripheral] = []
+    @Published var isBluetoothOn: Bool = false
     
     private override init() {
+        
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
     func startScanning() {
+        
         guard centralManager.state == .poweredOn else {
             print("Bluetooth is not powered on.")
             return
@@ -30,15 +33,22 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate {
     }
     
     func stopScanning() {
+        
         centralManager.stopScan()
     }
+}
+
+extension BluetoothManager: CBCentralManagerDelegate {
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        
         switch central.state {
         case .poweredOn:
             print("Bluetooth is powered on.")
+            isBluetoothOn = true
         case .poweredOff:
             print("Bluetooth is powered off.")
+            isBluetoothOn = false
         case .resetting:
             print("Bluetooth is resetting.")
         case .unauthorized:

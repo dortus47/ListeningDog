@@ -9,11 +9,13 @@ import Foundation
 import IOBluetooth
 
 class BluetoothDeviceInfo: ObservableObject {
-    let device: IOBluetoothDevice
-    var deviceType: DeviceType
+    
     @Published var isConnecting: Bool
     @Published var battery: Int
-
+    
+    let device: IOBluetoothDevice
+    var deviceType: DeviceType
+    
     init(device: IOBluetoothDevice,deviceType: DeviceType, isConnecting: Bool, battery: Int) {
         self.device = device
         self.deviceType = deviceType

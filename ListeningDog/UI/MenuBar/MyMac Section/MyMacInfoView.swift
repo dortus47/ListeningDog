@@ -24,7 +24,7 @@ struct MyMacInfoView: View {
     var body: some View {
         
         Section(header: SectionHeaderView(title: "나의 Mac"), footer: Divider()) {
-            HStack(spacing: 3) {
+            HStack(spacing: 7) {
                 
                 Image(systemName: "laptopcomputer")
                 Text(myMacManager.macModel)

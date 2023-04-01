@@ -15,7 +15,7 @@ struct DeviceInfoView: View {
     
     var body: some View {
         
-        HStack(spacing: 3) {
+        HStack(spacing: 7) {
             
             Image(systemName: bluetoothDeviceInfo.isConnecting ? "personalhotspot.circle.fill" : "personalhotspot.circle")
                 .resizable()

@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MenuBarExtraView: View {
     
-    
-    
     @Binding var currentNumber: String
     @State private var BluetoothIsOn: Bool = false
+    @State private var isHovered = false
     
     var body: some View {
         
@@ -25,30 +25,47 @@ struct MenuBarExtraView: View {
             MyMacInfoView()
 
             PairingDevicesView()
-
-            Section(header: SectionHeaderView(title: "Bluetooth"), footer: Divider()) {
-                Toggle("Bluetooth", isOn: $BluetoothIsOn)
-                    .toggleStyle(SwitchToggleStyle())
+            
+            HStack(spacing: 7) {
+                
+                Button("Preferences...") {
+                    NSApp.terminate(nil)
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
             }
-
-            Section(content: {
-                Button("One") {
-                    currentNumber = "1"
-                    BluetoothManager.shared.startScanning()
-                }
-                Button("Two") {
-                    currentNumber = "2"
-                    BluetoothManager.shared.stopScanning()
-                }
-                Button("Three") {
-                    currentNumber = "3"
-                }
-
+            .frame(height: 25)
+            .padding(.horizontal, 5)
+            .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
+            .cornerRadius(8)
+            .onHover { hovering in
+                isHovered = hovering
+            }
+            
+            HStack(spacing: 7) {
+                
                 Button("Quit") {
                     NSApp.terminate(nil)
                 }
-            })
+                .buttonStyle(.plain)
+                
+                Spacer()
+            }
+            .frame(height: 25)
+            .padding(.horizontal, 5)
+            .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
+            .cornerRadius(8)
+            .onHover { hovering in
+                isHovered = hovering
+            }
+            
+            Spacer()
+                .frame(height: 5)
+            
+
         }
+        .frame(minHeight: 450)
         .listStyle(.plain)
     }
     
