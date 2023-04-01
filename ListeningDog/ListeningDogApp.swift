@@ -12,12 +12,13 @@ import SwiftUI
 struct ListeningDogApp: App {
     
     @State var currentNumber: String = "1"
+    @State var mainImage = Image("dog")
 
     var body: some Scene {
         
-        MenuBarExtra(currentNumber, systemImage: "\(currentNumber).circle") {
+        MenuBarExtra("ListeningDogApp", image: "dog") {
             let pairedDevices = PairedDevices()
-            MenuBarExtraView(currentNumber: $currentNumber)
+            MenuBarExtraView()
                 .environmentObject(pairedDevices)
                 .onAppear {
                     pairedDevices.getPairedDevices()

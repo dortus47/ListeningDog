@@ -10,7 +10,6 @@ import Combine
 
 struct MenuBarExtraView: View {
     
-    @Binding var currentNumber: String
     @State private var BluetoothIsOn: Bool = false
     @State private var isHovered = false
     
@@ -78,10 +77,9 @@ struct MenuBarExtraView: View {
 }
 
 struct MenuBarExtraView_Previews: PreviewProvider {
-    @State static var currentNumber: String = "1"
     
     static var previews: some View {
-        MenuBarExtraView(currentNumber: $currentNumber)
+        MenuBarExtraView()
             .environmentObject(PairedDevices())
     }
 }
