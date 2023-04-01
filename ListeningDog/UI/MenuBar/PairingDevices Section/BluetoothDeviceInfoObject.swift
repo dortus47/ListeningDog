@@ -1,5 +1,5 @@
 //
-//  BluetoothDeviceInfo.swift
+//  BluetoothDeviceInfoObject.swift
 //  ListeningDog
 //
 //  Created by 장은석 on 2023/03/26.
@@ -8,7 +8,7 @@
 import Foundation
 import IOBluetooth
 
-class BluetoothDeviceInfo: ObservableObject {
+class BluetoothDeviceInfoObject: ObservableObject {
     
     @Published var isConnecting: Bool
     @Published var battery: Int

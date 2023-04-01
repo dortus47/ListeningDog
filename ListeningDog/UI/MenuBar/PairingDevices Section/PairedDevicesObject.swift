@@ -19,9 +19,9 @@ enum DeviceType {
     static let allAppleDevices: [DeviceType] = [.magicKeyboard, .magicMouse, .magicTrackpad, .airPods]
 }
 
-class PairedDevices: ObservableObject {
+class PairedDevicesObject: ObservableObject {
     
-    @Published var pairedDevices: [BluetoothDeviceInfo] = []
+    @Published var pairedDevices: [BluetoothDeviceInfoObject] = []
     private var timerCancellable: AnyCancellable?
     
     init() {
@@ -35,7 +35,7 @@ class PairedDevices: ObservableObject {
     }
     
     func getPairedDevices() {
-        var devicesList: [BluetoothDeviceInfo] = []
+        var devicesList: [BluetoothDeviceInfoObject] = []
         
         if let devices = IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice] {
             for device in devices {
@@ -45,7 +45,7 @@ class PairedDevices: ObservableObject {
                 let batteryLevel = getBatteryLevel(for: device) ?? 0
                 
                 print("BluetoothDeviceInfo \(device.name) \(isConnected) \(isAirPodsDevice(device))")
-                let bluetoothDeviceInfo = BluetoothDeviceInfo(device: device, deviceType: deviceType, isConnecting: isConnected, battery: batteryLevel)
+                let bluetoothDeviceInfo = BluetoothDeviceInfoObject(device: device, deviceType: deviceType, isConnecting: isConnected, battery: batteryLevel)
                 devicesList.append(bluetoothDeviceInfo)
             }
         }

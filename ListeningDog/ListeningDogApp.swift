@@ -10,19 +10,13 @@ import SwiftUI
 
 @main
 struct ListeningDogApp: App {
-    
-    @State var currentNumber: String = "1"
-    @State var mainImage = Image("dog")
 
     var body: some Scene {
         
         MenuBarExtra("ListeningDogApp", image: "dog") {
-            let pairedDevices = PairedDevices()
+            let pairedDevicesObject = PairedDevicesObject()
             MenuBarExtraView()
-                .environmentObject(pairedDevices)
-                .onAppear {
-                    pairedDevices.getPairedDevices()
-                }
+                .environmentObject(pairedDevicesObject)
         }
         .menuBarExtraStyle(.window)
     }

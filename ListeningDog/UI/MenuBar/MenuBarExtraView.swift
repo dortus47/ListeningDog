@@ -80,7 +80,7 @@ struct MenuBarExtraView_Previews: PreviewProvider {
     
     static var previews: some View {
         MenuBarExtraView()
-            .environmentObject(PairedDevices())
+            .environmentObject(PairedDevicesObject())
     }
 }
 
