@@ -5,8 +5,9 @@
 //  Created by 장은석 on 2023/03/22.
 //
 
-import Cocoa
 import SwiftUI
+import Cocoa
+
 
 @main
 struct ListeningDogApp: App {
@@ -21,25 +22,3 @@ struct ListeningDogApp: App {
         .menuBarExtraStyle(.window)
     }
 }
-
-// MARK: init
-//class AppDelegate: NSObject, NSApplicationDelegate {
-//
-//    // 상태바 인스턴스 변수
-//    var statusBar: StatusBarController?
-//
-//    var popover = NSPopover.init()
-//
-//    func applicationDidFinishLaunching(_ aNotification: Notification) {
-//
-//        popover.contentSize = NSSize(width: 360, height: 360)
-//        popover.contentViewController = NSHostingController(rootView: ContentView())
-//
-//        // 상태바 인스턴스 초기화
-//        statusBar = StatusBarController.init(popover)
-//    }
-//
-//    func applicationWillTerminate(_ aNotification: Notification) {
-//        // Insert code here to tear down your application
-//    }
-//}

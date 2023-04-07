@@ -9,7 +9,9 @@ import CoreBluetooth
 import IOBluetooth
 import Combine
 
+
 class BluetoothManager: NSObject, ObservableObject {
+    
     static let shared = BluetoothManager()
     
     private var centralManager: CBCentralManager!

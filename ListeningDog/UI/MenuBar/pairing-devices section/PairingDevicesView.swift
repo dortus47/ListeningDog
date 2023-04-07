@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct PairingDevicesView: View {
+    
     @EnvironmentObject var pairedDevicesObject: PairedDevicesObject
     
     var body: some View {

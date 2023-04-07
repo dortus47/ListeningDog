@@ -7,7 +7,9 @@
 
 import Foundation
 
+
 func batteryImageName(batteryLevel: Int? = 0, isCharging: Bool = false) -> String {
+    
     guard let batteryLevel else {
         return "battery.0"
     }

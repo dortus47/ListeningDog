@@ -18,7 +18,6 @@
 		03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */; };
 		03DB565429CF32FC00D557C0 /* MyMacManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* MyMacManager.swift */; };
 		03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */; };
-		03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DE29CA095F00C1C923 /* ContentView.swift */; };
 		03E0B9E129CA096000C1C923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E029CA096000C1C923 /* Assets.xcassets */; };
 		03E0B9E429CA096000C1C923 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */; };
 		03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */; };
@@ -40,7 +39,6 @@
 		03DB565329CF32FC00D557C0 /* MyMacManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacManager.swift; sourceTree = "<group>"; };
 		03E0B9D929CA095F00C1C923 /* ListeningDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListeningDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDogApp.swift; sourceTree = "<group>"; };
-		03E0B9DE29CA095F00C1C923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E0B9E029CA096000C1C923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListeningDog.entitlements; sourceTree = "<group>"; };
@@ -64,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
-				03E1BFB429D701BB00E12B8A /* MyMac Section */,
-				03E1BFAF29D6F5E400E12B8A /* PairingDevices Section */,
+				03E1BFB429D701BB00E12B8A /* myMac section */,
+				03E1BFAF29D6F5E400E12B8A /* pairing-devices section */,
 			);
 			path = MenuBar;
 			sourceTree = "<group>";
@@ -92,7 +90,6 @@
 		038371B629CF533C0036E44A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
 				038371B029CF4FE80036E44A /* CustomViews */,
 				038371AB29CF3D000036E44A /* MenuBar */,
 			);
@@ -156,22 +153,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		03E1BFAF29D6F5E400E12B8A /* PairingDevices Section */ = {
+		03E1BFAF29D6F5E400E12B8A /* pairing-devices section */ = {
 			isa = PBXGroup;
 			children = (
 				038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */,
 				038371AE29CF44C40036E44A /* PairedDevicesObject.swift */,
 				038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */,
 			);
-			path = "PairingDevices Section";
+			path = "pairing-devices section";
 			sourceTree = "<group>";
 		};
-		03E1BFB429D701BB00E12B8A /* MyMac Section */ = {
+		03E1BFB429D701BB00E12B8A /* myMac section */ = {
 			isa = PBXGroup;
 			children = (
 				038371B729CF5AE80036E44A /* MyMacInfoView.swift */,
 			);
-			path = "MyMac Section";
+			path = "myMac section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
-				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
 				03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */,
 				038371BC29D015750036E44A /* BluetoothDeviceInfoObject.swift in Sources */,
 				03E1BFB329D7019D00E12B8A /* Extentions+SwiftUI.swift in Sources */,

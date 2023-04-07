@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+
 struct MenuBarExtraView: View {
     
     @State private var BluetoothIsOn: Bool = false
@@ -25,55 +26,70 @@ struct MenuBarExtraView: View {
 
             PairingDevicesView()
             
-            HStack(spacing: 7) {
-                
-                Button("Preferences...") {
-                    NSApp.terminate(nil)
-                }
-                .buttonStyle(.plain)
-                
-                Spacer()
-            }
-            .frame(height: 25)
-            .padding(.horizontal, 5)
-            .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
-            .cornerRadius(8)
-            .onHover { hovering in
-                isHovered = hovering
-            }
-            
-            HStack(spacing: 7) {
-                
-                Button("Quit") {
-                    NSApp.terminate(nil)
-                }
-                .buttonStyle(.plain)
-                
-                Spacer()
-            }
-            .frame(height: 25)
-            .padding(.horizontal, 5)
-            .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
-            .cornerRadius(8)
-            .onHover { hovering in
-                isHovered = hovering
-            }
+            PreferencesView()
+
+            QuitView()
             
             Spacer()
                 .frame(height: 5)
-            
-
         }
         .frame(minHeight: 450)
         .listStyle(.plain)
     }
     
-    private func matchingDeviceImageName(name: String?) -> String {
+    struct PreferencesView: View {
         
+        @State private var isHovered = false
         
-        
-        return "default"
+        var body: some View {
+            
+            Button {
+                //
+            } label: {
+                HStack {
+                    Text("Preferences...")
+                    Spacer()
+                }
+                .frame(height: 30)
+                .padding(.horizontal, 5)
+                .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
+                .cornerRadius(8)
+                .onHover { hovering in
+                    isHovered = hovering
+                }
+            }
+            .buttonStyle(.plain)
+        }
     }
+    
+    struct QuitView: View {
+        
+        @State private var isHovered = false
+        
+        var body: some View {
+            
+            Button {
+                NSApp.terminate(nil)
+            } label: {
+                HStack(spacing: 7) {
+                    
+                    Text("Quit")
+                    
+                    Spacer()
+                }
+                .frame(height: 30)
+                .padding(.horizontal, 5)
+                .background(isHovered ? Color.gray.opacity(0.2) : Color.clear)
+                .cornerRadius(8)
+                .onHover { hovering in
+                    isHovered = hovering
+                }
+            }
+            .buttonStyle(.plain)
+        }
+    }
+    
+    
 }
 
 struct MenuBarExtraView_Previews: PreviewProvider {

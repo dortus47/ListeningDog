@@ -10,7 +10,6 @@ import Combine
 import IOKit.ps
 import IOKit.pwr_mgt
 
-
 class MyMacManager: ObservableObject {
     
     @Published var batteryLevel: Int?
@@ -20,6 +19,7 @@ class MyMacManager: ObservableObject {
     private var timer: AnyCancellable?
     
     init() {
+        
         timer = Timer.publish(every: 3, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in

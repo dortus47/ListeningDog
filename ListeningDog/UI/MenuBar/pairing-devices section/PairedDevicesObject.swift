@@ -9,6 +9,7 @@ import SwiftUI
 import IOBluetooth
 import Combine
 
+
 enum DeviceType {
     case magicKeyboard
     case magicMouse

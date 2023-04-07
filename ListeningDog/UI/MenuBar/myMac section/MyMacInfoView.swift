@@ -8,6 +8,7 @@
 import SwiftUI
 import AppKit
 
+
 struct MyMacInfoView: View {
     
     @ObservedObject var myMacManager = MyMacManager()
@@ -56,6 +57,7 @@ struct MyMacInfoView: View {
     }
     
     private func openAboutThisMac() {
+        
         let task = Process()
         task.launchPath = "/usr/bin/env"
         task.arguments = ["open", "/System/Library/CoreServices/Applications/About This Mac.app"]

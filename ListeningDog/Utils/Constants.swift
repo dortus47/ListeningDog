@@ -7,12 +7,6 @@
 
 import Foundation
 
-//class AppleName {
-//
-//    static let magicKeyboard = "Magic Keyboard"
-//
-//
-//}
 
 enum AppleDeviceType {
     case magicKeyboard
