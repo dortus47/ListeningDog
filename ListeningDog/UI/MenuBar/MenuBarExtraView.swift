@@ -11,23 +11,25 @@ import Combine
 
 struct MenuBarExtraView: View {
     
+    @EnvironmentObject var appDelegate: AppDelegate
+    
     @State private var BluetoothIsOn: Bool = false
     @State private var isHovered = false
     
     var body: some View {
         
         List {
-
+            
             Text("ListeningDog")
                 .fontWeight(.bold)
                 .padding(.top, 5)
-
+            
             MyMacInfoView()
-
+            
             PairingDevicesView()
             
             PreferencesView()
-
+            
             QuitView()
             
             Spacer()
@@ -39,12 +41,13 @@ struct MenuBarExtraView: View {
     
     struct PreferencesView: View {
         
+        @EnvironmentObject var appDelegate: AppDelegate
         @State private var isHovered = false
         
         var body: some View {
             
             Button {
-                //
+                appDelegate.showMainWindow()
             } label: {
                 HStack {
                     Text("Preferences...")
@@ -88,8 +91,6 @@ struct MenuBarExtraView: View {
             .buttonStyle(.plain)
         }
     }
-    
-    
 }
 
 struct MenuBarExtraView_Previews: PreviewProvider {
