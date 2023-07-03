@@ -45,7 +45,6 @@ class PairedDevicesObject: ObservableObject {
                 let deviceType: DeviceType = isAppleDevice(device: device) ? .airPods : .thirdParty
                 let batteryLevel = getBatteryLevel(for: device) ?? 0
                 
-                print("BluetoothDeviceInfo \(device.name) \(isConnected) \(isAirPodsDevice(device))")
                 let bluetoothDeviceInfo = BluetoothDeviceInfoObject(device: device, deviceType: deviceType, isConnecting: isConnected, battery: batteryLevel)
                 devicesList.append(bluetoothDeviceInfo)
             }
@@ -60,22 +59,6 @@ class PairedDevicesObject: ObservableObject {
             return false
         }
     }
-    
-    private func isAirPodsDevice(_ device: IOBluetoothDevice) -> Bool {
-        let deviceName = device.name ?? ""
-        
-//        if deviceName.contains("AirPods") || deviceName.contains("AirPod") {
-//            return true
-//        }
-        
-        let serviceUUIDs = device.services?.compactMap { ($0 as AnyObject).uuidString }
-        if let uuids = serviceUUIDs, uuids.contains("0x1801") || uuids.contains("0x180f") {
-            return true
-        }
-        
-        return false
-    }
-
     
     func getBatteryLevel(for device: IOBluetoothDevice) -> Int? {
         var rssi = device.rawRSSI()

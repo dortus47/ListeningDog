@@ -107,6 +107,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		03DA674D2A52A4A0006F2583 /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				038371AE29CF44C40036E44A /* PairedDevicesObject.swift */,
+				038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */,
+			);
+			path = ObservableObject;
+			sourceTree = "<group>";
+		};
 		03DB565129CF323B00D557C0 /* Description */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +157,8 @@
 			children = (
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
 				038371B329CF530B0036E44A /* Utils */,
+				03DA674D2A52A4A0006F2583 /* ObservableObject */,
 				038371B629CF533C0036E44A /* UI */,
-				03DB565329CF32FC00D557C0 /* MyMacManager.swift */,
 				03DB565129CF323B00D557C0 /* Description */,
 				03DB565229CF325000D557C0 /* Files */,
 			);
@@ -168,8 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */,
-				038371AE29CF44C40036E44A /* PairedDevicesObject.swift */,
-				038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */,
 			);
 			path = "pairing-devices section";
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				038371B729CF5AE80036E44A /* MyMacInfoView.swift */,
+				03DB565329CF32FC00D557C0 /* MyMacManager.swift */,
 			);
 			path = "myMac section";
 			sourceTree = "<group>";
