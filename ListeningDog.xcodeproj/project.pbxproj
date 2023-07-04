@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035C74C82A54805000F533C6 /* MenuBarExtraAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 035C74C72A54805000F533C6 /* MenuBarExtraAccess */; };
 		0364EC8129E0766600D9603A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364EC8029E0766600D9603A /* HomeView.swift */; };
 		038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */; };
 		038371AF29CF44C40036E44A /* PairedDevicesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AE29CF44C40036E44A /* PairedDevicesObject.swift */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035C74C82A54805000F533C6 /* MenuBarExtraAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +208,9 @@
 			dependencies = (
 			);
 			name = ListeningDog;
+			packageProductDependencies = (
+				035C74C72A54805000F533C6 /* MenuBarExtraAccess */,
+			);
 			productName = ListeningDog;
 			productReference = 03E0B9D929CA095F00C1C923 /* ListeningDog.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 03E0B9D029CA095F00C1C923;
+			packageReferences = (
+				035C74C62A54805000F533C6 /* XCRemoteSwiftPackageReference "MenuBarExtraAccess" */,
+			);
 			productRefGroup = 03E0B9DA29CA095F00C1C923 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -476,6 +484,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		035C74C62A54805000F533C6 /* XCRemoteSwiftPackageReference "MenuBarExtraAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/MenuBarExtraAccess";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		035C74C72A54805000F533C6 /* MenuBarExtraAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 035C74C62A54805000F533C6 /* XCRemoteSwiftPackageReference "MenuBarExtraAccess" */;
+			productName = MenuBarExtraAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03E0B9D129CA095F00C1C923 /* Project object */;
 }
