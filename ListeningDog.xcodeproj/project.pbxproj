@@ -7,21 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0364EC8129E0766600D9603A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364EC8029E0766600D9603A /* HomeView.swift */; };
+		038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */; };
+		038371AF29CF44C40036E44A /* PairedDevicesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371AE29CF44C40036E44A /* PairedDevicesObject.swift */; };
+		038371B529CF53150036E44A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371B429CF53150036E44A /* Constants.swift */; };
+		038371B829CF5AE80036E44A /* MyMacInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371B729CF5AE80036E44A /* MyMacInfoView.swift */; };
+		038371BC29D015750036E44A /* BluetoothDeviceInfoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */; };
+		038371C029D057F80036E44A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038371BF29D057F80036E44A /* SectionHeaderView.swift */; };
+		0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687929CEDF770089DC0A /* MenuBarExtraView.swift */; };
+		0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399687D29CEE5530089DC0A /* BluetoothManager.swift */; };
+		03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */; };
+		03DB565429CF32FC00D557C0 /* MyMacManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB565329CF32FC00D557C0 /* MyMacManager.swift */; };
 		03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */; };
-		03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9DE29CA095F00C1C923 /* ContentView.swift */; };
 		03E0B9E129CA096000C1C923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E029CA096000C1C923 /* Assets.xcassets */; };
 		03E0B9E429CA096000C1C923 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */; };
 		03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */; };
+		03E1BFB329D7019D00E12B8A /* Extentions+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1BFB229D7019D00E12B8A /* Extentions+SwiftUI.swift */; };
+		03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0364EC8029E0766600D9603A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingDevicesView.swift; sourceTree = "<group>"; };
+		038371AE29CF44C40036E44A /* PairedDevicesObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedDevicesObject.swift; sourceTree = "<group>"; };
+		038371B429CF53150036E44A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		038371B729CF5AE80036E44A /* MyMacInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacInfoView.swift; sourceTree = "<group>"; };
+		038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceInfoObject.swift; sourceTree = "<group>"; };
+		038371BF29D057F80036E44A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		0399687929CEDF770089DC0A /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
+		0399687D29CEE5530089DC0A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListeningDog-Bridging-Header.h"; sourceTree = "<group>"; };
+		03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		03DB565329CF32FC00D557C0 /* MyMacManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacManager.swift; sourceTree = "<group>"; };
 		03E0B9D929CA095F00C1C923 /* ListeningDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListeningDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDogApp.swift; sourceTree = "<group>"; };
-		03E0B9DE29CA095F00C1C923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E0B9E029CA096000C1C923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListeningDog.entitlements; sourceTree = "<group>"; };
 		03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		03E1BFB229D7019D00E12B8A /* Extentions+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+SwiftUI.swift"; sourceTree = "<group>"; };
+		03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +60,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0364EC7F29E0764A00D9603A /* Main Windows */ = {
+			isa = PBXGroup;
+			children = (
+				0364EC8029E0766600D9603A /* HomeView.swift */,
+			);
+			path = "Main Windows";
+			sourceTree = "<group>";
+		};
+		038371AB29CF3D000036E44A /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				0399687929CEDF770089DC0A /* MenuBarExtraView.swift */,
+				03E1BFB429D701BB00E12B8A /* myMac section */,
+				03E1BFAF29D6F5E400E12B8A /* pairing-devices section */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		038371B029CF4FE80036E44A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				038371BF29D057F80036E44A /* SectionHeaderView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		038371B329CF530B0036E44A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				038371B429CF53150036E44A /* Constants.swift */,
+				03CF7CAE29D099090034BE93 /* GlobalFunctions.swift */,
+				0399687D29CEE5530089DC0A /* BluetoothManager.swift */,
+				03E1BFB229D7019D00E12B8A /* Extentions+SwiftUI.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		038371B629CF533C0036E44A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0364EC7F29E0764A00D9603A /* Main Windows */,
+				038371AB29CF3D000036E44A /* MenuBar */,
+				038371B029CF4FE80036E44A /* CustomViews */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		03DA674D2A52A4A0006F2583 /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				038371AE29CF44C40036E44A /* PairedDevicesObject.swift */,
+				038371BB29D015750036E44A /* BluetoothDeviceInfoObject.swift */,
+			);
+			path = ObservableObject;
+			sourceTree = "<group>";
+		};
+		03DB565129CF323B00D557C0 /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				03FDBB1429CA25FB0037C9C9 /* EventMonitor.swift */,
+				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		03DB565229CF325000D557C0 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				03E0B9E229CA096000C1C923 /* Preview Content */,
+				03E0B9E029CA096000C1C923 /* Assets.xcassets */,
+				03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */,
+				0399688029CEFD960089DC0A /* ListeningDog-Bridging-Header.h */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		03E0B9D029CA095F00C1C923 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				03E0B9DC29CA095F00C1C923 /* ListeningDogApp.swift */,
-				03E0B9DE29CA095F00C1C923 /* ContentView.swift */,
-				03E0B9EB29CA0D0300C1C923 /* StatusBarController.swift */,
-				03E0B9E029CA096000C1C923 /* Assets.xcassets */,
-				03E0B9E529CA096000C1C923 /* ListeningDog.entitlements */,
-				03E0B9E229CA096000C1C923 /* Preview Content */,
+				038371B329CF530B0036E44A /* Utils */,
+				03DA674D2A52A4A0006F2583 /* ObservableObject */,
+				038371B629CF533C0036E44A /* UI */,
+				03DB565129CF323B00D557C0 /* Description */,
+				03DB565229CF325000D557C0 /* Files */,
 			);
 			path = ListeningDog;
 			sourceTree = "<group>";
@@ -70,6 +171,23 @@
 				03E0B9E329CA096000C1C923 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03E1BFAF29D6F5E400E12B8A /* pairing-devices section */ = {
+			isa = PBXGroup;
+			children = (
+				038371AC29CF3FDB0036E44A /* PairingDevicesView.swift */,
+			);
+			path = "pairing-devices section";
+			sourceTree = "<group>";
+		};
+		03E1BFB429D701BB00E12B8A /* myMac section */ = {
+			isa = PBXGroup;
+			children = (
+				038371B729CF5AE80036E44A /* MyMacInfoView.swift */,
+				03DB565329CF32FC00D557C0 /* MyMacManager.swift */,
+			);
+			path = "myMac section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +260,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E0B9DF29CA095F00C1C923 /* ContentView.swift in Sources */,
+				0399687A29CEDF770089DC0A /* MenuBarExtraView.swift in Sources */,
+				03CF7CAF29D099090034BE93 /* GlobalFunctions.swift in Sources */,
+				038371BC29D015750036E44A /* BluetoothDeviceInfoObject.swift in Sources */,
+				0364EC8129E0766600D9603A /* HomeView.swift in Sources */,
+				03E1BFB329D7019D00E12B8A /* Extentions+SwiftUI.swift in Sources */,
+				03DB565429CF32FC00D557C0 /* MyMacManager.swift in Sources */,
+				038371AD29CF3FDB0036E44A /* PairingDevicesView.swift in Sources */,
+				038371B529CF53150036E44A /* Constants.swift in Sources */,
 				03E0B9EC29CA0D0300C1C923 /* StatusBarController.swift in Sources */,
+				038371AF29CF44C40036E44A /* PairedDevicesObject.swift in Sources */,
+				038371B829CF5AE80036E44A /* MyMacInfoView.swift in Sources */,
+				03FDBB1529CA25FB0037C9C9 /* EventMonitor.swift in Sources */,
+				038371C029D057F80036E44A /* SectionHeaderView.swift in Sources */,
 				03E0B9DD29CA095F00C1C923 /* ListeningDogApp.swift in Sources */,
+				0399687E29CEE5530089DC0A /* BluetoothManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,15 +399,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ListeningDog/ListeningDog.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ListeningDog/Files/ListeningDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Z9N6W59ZG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to discover nearby devices.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -287,6 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mies.ListeningDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/Files/ListeningDog-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -296,15 +429,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ListeningDog/ListeningDog.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ListeningDog/Files/ListeningDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ListeningDog/Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Z9N6W59ZG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to discover nearby devices.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mies.ListeningDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ListeningDog/Files/ListeningDog-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
