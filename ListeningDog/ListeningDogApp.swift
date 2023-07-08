@@ -5,8 +5,8 @@
 //  Created by 장은석 on 2023/03/22.
 //
 
-import MenuBarExtraAccess
 import SwiftUI
+import MenuBarExtraAccess
 import Cocoa
 
 
@@ -22,33 +22,36 @@ struct ListeningDogApp: App {
         WindowGroup {
             HomeView()
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
         
-        MenuBarExtra("ListeningDogApp", image: "dog") {
-            let pairedDevicesObject = PairedDevicesObject()
-            MenuBarExtraView(isMenuPresented: $isMenuPresented)
-                .environmentObject(appDelegate)
-                .environmentObject(pairedDevicesObject)
-//                .environmentObject(listengDogAppState)
-        }
-        .menuBarExtraStyle(.window)
-        .menuBarExtraAccess(isPresented: $isMenuPresented) { statusItem in // <-- the magic ✨
-            // access status item or store it in a @State var
-        }
+//        MenuBarExtra("ListeningDogApp", image: "dog") {
+//            let pairedDevicesObject = PairedDevicesObject()
+//            MenuBarExtraView(isMenuPresented: $isMenuPresented)
+//                .environmentObject(appDelegate)
+//                .environmentObject(pairedDevicesObject)
+////                .environmentObject(listengDogAppState)
+//        }
+//        .menuBarExtraStyle(.window)
+//        .menuBarExtraAccess(isPresented: $isMenuPresented) { statusItem in // <-- the magic ✨
+//            // access status item or store it in a @State var
+//        }
     }
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     @Published var mainWindow: NSWindow?
     
-    //    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-    //        return false
-    //    }
+        func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+            return true
+        }
     
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        mainWindow = NSApp.windows.first
-        mainWindow?.orderOut(nil)
-    }
-    
+//    func applicationDidFinishLaunching(_ notification: Notification) {
+//        if let window = NSApp.windows.first {
+//            mainWindow = window
+//            window.orderOut(nil)
+//        }
+//    }
+
     func showMainWindow() {
         mainWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)

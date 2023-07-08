@@ -50,7 +50,6 @@ struct MenuBarExtraView: View {
         var body: some View {
             
             Button {
-                
                 isMenuPresented = false
                 appDelegate.showMainWindow()
             } label: {
