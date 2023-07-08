@@ -14,7 +14,8 @@ import Cocoa
 struct ListeningDogApp: App {
     
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var listengDogAppState = ListengDogAppState()
+//    @StateObject var listengDogAppState = ListengDogAppState()
+    @State var isMenuPresented: Bool = false
     
     var body: some Scene {
         
@@ -24,13 +25,13 @@ struct ListeningDogApp: App {
         
         MenuBarExtra("ListeningDogApp", image: "dog") {
             let pairedDevicesObject = PairedDevicesObject()
-            MenuBarExtraView()
+            MenuBarExtraView(isMenuPresented: $isMenuPresented)
                 .environmentObject(appDelegate)
                 .environmentObject(pairedDevicesObject)
-                .environmentObject(listengDogAppState)
+//                .environmentObject(listengDogAppState)
         }
         .menuBarExtraStyle(.window)
-        .menuBarExtraAccess(isPresented: $listengDogAppState.isMenuPresented) { statusItem in // <-- the magic ✨
+        .menuBarExtraAccess(isPresented: $isMenuPresented) { statusItem in // <-- the magic ✨
             // access status item or store it in a @State var
         }
     }

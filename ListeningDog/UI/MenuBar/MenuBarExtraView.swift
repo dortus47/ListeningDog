@@ -13,6 +13,7 @@ struct MenuBarExtraView: View {
     
     @EnvironmentObject var appDelegate: AppDelegate
     
+    @Binding var isMenuPresented: Bool
     @State private var BluetoothIsOn: Bool = false
     @State private var isHovered = false
     
@@ -28,7 +29,7 @@ struct MenuBarExtraView: View {
             
             PairingDevicesView()
             
-            PreferencesView()
+            PreferencesView(isMenuPresented: $isMenuPresented)
             
             QuitView()
             
@@ -42,14 +43,15 @@ struct MenuBarExtraView: View {
     struct PreferencesView: View {
         
         @EnvironmentObject var appDelegate: AppDelegate
-        @EnvironmentObject var listengDogAppState: ListengDogAppState
+//        @EnvironmentObject var listengDogAppState: ListengDogAppState
         @State private var isHovered = false
+        @Binding var isMenuPresented: Bool
         
         var body: some View {
             
             Button {
                 
-                listengDogAppState.isMenuPresented.toggle()
+                isMenuPresented = false
                 appDelegate.showMainWindow()
             } label: {
                 HStack {
@@ -99,7 +101,7 @@ struct MenuBarExtraView: View {
 struct MenuBarExtraView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MenuBarExtraView()
+        MenuBarExtraView( isMenuPresented: .constant(true))
             .environmentObject(PairedDevicesObject())
     }
 }
