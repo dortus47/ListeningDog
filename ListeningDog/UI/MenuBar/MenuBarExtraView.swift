@@ -42,11 +42,14 @@ struct MenuBarExtraView: View {
     struct PreferencesView: View {
         
         @EnvironmentObject var appDelegate: AppDelegate
+        @EnvironmentObject var listengDogAppState: ListengDogAppState
         @State private var isHovered = false
         
         var body: some View {
             
             Button {
+                
+                listengDogAppState.isMenuPresented.toggle()
                 appDelegate.showMainWindow()
             } label: {
                 HStack {
